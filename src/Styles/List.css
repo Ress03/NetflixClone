@@ -1,0 +1,241 @@
+.list_container{
+    height: 40px;
+    width: auto;
+    z-index: 1;
+}
+#list_container{
+    margin-top: -175px;
+}
+.Trending_now_container,
+.tvShows_now_container,
+.topRated_now_container,
+.suspenseful_now_container,
+.Movies_now_container,
+.Popular_now_container,
+.Documentary_now_container,
+.ActionMovies_now_container,
+.Fantasy_now_container
+{
+    margin-top: 220px;
+}
+.list_container .title{
+    position: relative;
+    font-size: 1.7rem;
+    margin-right: 20px;
+    font-family: netflix_medium,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    color: #ffff;
+}
+.list_container .image_carousel_container{
+    margin-top: 15px;
+    min-height: 160px;
+    width: auto;
+    transition: .2s;
+    margin-top: -85px;
+}
+.mySwiper{
+    width:  100%;
+    height: auto !important;
+}
+.swiper-slide {
+    padding-top: 100px !important;
+  }
+.eachSwiper{
+    min-height: 160px !important;
+    width: 280px !important;
+    margin-right: 10px !important;
+}
+.eachSwiper:last-of-type{
+    margin-right: 0 !important;
+}
+.list_container .image_carousel_container .each_image{
+    height: 160px;
+    width: 100%;
+    background-color: #181818;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .2s;
+    z-index: 0;
+    position: relative;
+}
+.list_container .image_carousel_container .each_image:last-of-type{
+    position: relative;
+    margin-right: 0;
+}
+.list_container .image_carousel_container .each_image .movie_cover{
+    width: 280px;
+    height: 160px;
+    transition: .2s;
+    background: 
+    linear-gradient(0.25turn, transparent, #1a1a1a, transparent),
+    linear-gradient(#222222, #222222),
+    radial-gradient(38px circle at 19px 19px, #222222 50%, transparent 51%),
+    linear-gradient(#222222, #222222);  
+    background-repeat: no-repeat;
+    background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px; 
+    background-position: -315px 0, 0 0, 0px 190px, 50px 195px; 
+    animation: loading 1.5s infinite;
+}
+@keyframes loading {  
+    to {
+      background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+    }
+}
+.list_container .image_carousel_container .left_btn,
+.list_container .image_carousel_container .right_btn{
+    cursor: pointer;
+    position: absolute;
+    height: 160px;
+    width: 60px;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    opacity: 0;
+    margin-top: 100px;
+}
+.list_container .image_carousel_container .right_btn{
+    right: 0;
+}
+.list_container .image_carousel_container .left_btn svg,
+.list_container .image_carousel_container .right_btn svg{
+    color: #ffff;
+    font-size: 40px;
+    transition: .3s;
+}
+
+.list_container .image_carousel_container .left_btn{
+    left: 60px;
+    display: none;
+}
+.for_margin_left{
+    margin-left: 60px;
+}
+
+/* Swiper Carousel Buttton Configuration */
+.swiper-button-prev,
+.swiper-button-next{
+    opacity: 0 !important;
+    z-index: -99 !important;
+    pointer-events: none !important;
+}
+
+
+/* Hover Container */
+.each_image .btn_configuration{
+    width: 90%;
+    height: 42px;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.each_image .btn_configuration .side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.each_image .btn_configuration .side .circle{
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+}
+.each_image .btn_configuration .side .circle:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+.each_image .btn_configuration .side .circle .circle_icon{
+    height: 22px;
+    width: auto;
+}
+.each_image .btn_configuration .side .circle:nth-child(1){
+    border: 2px solid #ffff;
+    background-color: #ffff;
+}
+.each_image .btn_configuration .side .circle:nth-child(2){
+    border: 2px solid #5c5c5c;
+    background-color: #232323;
+}
+.each_image .btn_configuration .side .circle:nth-child(2):hover{
+    border: 2px solid #ffff;
+}
+
+.each_image .btn_configuration .side .circle_other{
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    border: 2px solid #5c5c5c;
+    background-color: #232323;
+}
+.each_image .btn_configuration .side .circle_other .circle_icon{
+    height: auto;
+    width: 20px;
+}
+.each_image .btn_configuration .side .circle_other:hover{
+    border: 2px solid #ffff;
+    opacity: 70%;
+}
+.each_image .title_part{
+    width: 90%;
+    margin: 0% auto;
+    margin-top: 15px;
+    color: #ffff;
+    font-size: 1.3rem;
+    font-family: netflix_medium,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+.each_image .section_part{
+    width: 90%;
+    margin: 0% auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-family: netflix_regular,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    font-size: 1rem;
+    color:#616161;
+}
+.each_image .section_part p{
+    transition: 1s;
+}
+.each_image .section_part p b{
+    color:#616161;
+}
+.each_image .section_part p:first-child b:first-child{
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 861px) {
+    #list_container{
+        margin-top: -78px;
+    }
+}
+@media screen and (max-width: 631px) {
+    #list_container{
+        margin-top: -55px;
+    }
+}
+@media screen and (max-width: 551px) {
+    #list_container{
+        margin-top: -79px;
+    }
+    .for_margin_left{
+        margin-left: 20px;
+    }
+    
+}

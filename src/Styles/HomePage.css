@@ -1,0 +1,375 @@
+.HomePage{
+    width: 100%;
+    height: 104vh;
+    overflow: hidden;
+}
+
+/* Shadowing in bottom */
+.shadowing{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    margin-top: 93vh;
+    left: 0;
+    background-image: linear-gradient(180deg, transparent, #141414, #141414);
+}
+
+
+/* Cover Photo */
+.HomePage .CoverPhoto_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 104vh;
+    width: 100%;
+    transition: 1.5s;
+    z-index: -1;
+}
+.HomePage .CoverPhoto_container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Trailer Video */
+.HomePage .TrailerVideo_container{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 104vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+}
+.HomePage .TrailerVideo_container video{
+    height: 150vh;
+    width: 125%;
+    pointer-events: none;
+}
+
+/* Primary Details */
+.Primary_Details{
+    position: absolute;
+    left: 60px;
+    bottom: 28vh;
+}
+.Primary_Details .title_img{
+    height: auto;
+    width: 450px;
+    transition: .5s;
+}
+.Primary_Details .description{
+    margin-top: 25px;
+    font-size: 1.5rem;
+    font-family: netflix_light,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    color: #ffff;
+    max-width: 600px;
+    transition: .8s;
+}
+.Primary_Details .btn_container{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+}
+.Primary_Details .btn_container .btn{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: netflix_regular,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    padding: 11px 35px;
+    font-size: 1.4rem;
+    transition: .4s;
+}
+.Primary_Details .btn_container .btn:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+.Primary_Details .btn_container .btn img{
+    height: 27px;
+}
+.Primary_Details .btn_container .btn:nth-child(1){
+    background-color: #ffff;
+}
+.Primary_Details .btn_container .btn:nth-child(2){
+    background-color: #857e7ea8;
+    color: #ffff;
+}
+
+/* Movie play button and age restrictions  */
+.age_play{    
+    position: absolute;
+    right: 0;
+    bottom: 26vh;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.age_play .controls{
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s;
+    opacity: 0%;
+    transition: .8s;
+    pointer-events: none;
+}
+.age_play .controls:hover{
+    cursor: pointer;
+    background-color: #857e7ea8;
+}
+.age_play .controls svg{
+    color: #ffff;
+    height: 40px;
+}  
+.age_play .controls #mute_icon,.age_play .controls #replay_icon{
+    display: none;
+}
+.age_play .age_restriction{
+    background-color: #6964647a;
+    border-left: 3px solid #ffff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 120px;
+} 
+.age_play .age_restriction span{
+    font-family: netflix_regular,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    color: #ffff;
+    font-size: 1.3rem;
+    margin-left: 10px;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1750px) {
+    .HomePage .TrailerVideo_container video{
+        width: 200%;
+    }
+}
+
+@media screen and (max-width: 1101px) {
+    .HomePage .TrailerVideo_container video{
+        width: 250%;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .HomePage{
+        height: 84vh;
+    }
+    /* Cover Photo */
+    .HomePage .CoverPhoto_container{
+        height: 84vh;
+    }
+    .HomePage .TrailerVideo_container{
+        height: 84vh;
+    }
+    /* Shadowing in bottom */
+    .shadowing{
+        margin-top: 73vh;
+    }
+
+    .HomePage .TrailerVideo_container video{
+        width: 250%;
+    }
+
+    /* Primary Details */
+    .Primary_Details{
+        bottom: 35vh;
+    }
+}
+@media screen and (max-width: 701px) {
+    .HomePage{
+        height: 54vh;
+    }
+    /* Cover Photo */
+    .HomePage .CoverPhoto_container{
+        height: 54vh;
+    }
+    .HomePage .TrailerVideo_container{
+        height: 54vh;
+    }
+    /* Shadowing in bottom */
+    .shadowing{
+        margin-top: 43vh;
+    }
+    .HomePage .TrailerVideo_container video{
+        width: 200%;
+    }
+
+    /* Primary Details */
+    .Primary_Details{
+        bottom: 62vh;
+    }
+    .Primary_Details .title_img{
+        width: 300px;
+    }
+    .Primary_Details .description{
+        font-size: 1rem;
+        max-width: 400px;
+    }
+
+    .Primary_Details .btn_container .btn{
+        margin-top: 0px;
+        padding: 10px 25px;
+        font-size: 1rem;
+        transition: .4s;
+    }
+
+    /* Movie play button and age restrictions  */
+    .age_play{ 
+        bottom: 65vh;
+    }
+}
+@media screen and (max-width: 631px) {
+    /* Primary Details */
+    .Primary_Details{
+        bottom: 59vh;
+    }
+    .Primary_Details .description{
+        max-width: 320px;
+    }
+    .age_play{ 
+        bottom: 62vh;
+    }
+}
+@media screen and (max-width: 601px) {
+    .HomePage .TrailerVideo_container video{
+        width: 200%;
+    }
+    .age_play{ 
+        bottom: 60vh;
+    }
+    .age_play .age_restriction{
+        width: 70px;
+    } 
+}
+@media screen and (max-width: 551px) {
+    .HomePage{
+        height: 64vh;
+    }
+    /* Cover Photo */
+    .HomePage .CoverPhoto_container{
+        height: 64vh;
+    }
+    .HomePage .TrailerVideo_container{
+        height: 64vh;
+    }
+    /* Shadowing in bottom */
+    .shadowing{
+        margin-top: 53vh;
+    }
+    .HomePage .TrailerVideo_container video{
+        width: 300%;
+    }
+
+    .age_play{    
+        height: 46vh;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 18vh;
+        top: 0;
+        bottom: 0;
+    }
+
+    /* Primary Details */
+    .Primary_Details{
+        left: 20px;
+        height: 48vh;
+        padding-bottom: 16vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        bottom: 0;
+        top: 0;
+    }
+    .Primary_Details .description{
+        margin-top: 10px;
+    }
+    .age_play{ 
+        bottom: 57vh;
+    }
+}
+@media screen and (max-width: 471px) {
+    .Primary_Details .btn_container .btn{
+        padding: 10px 15px;
+        font-size: 1rem;
+        transition: .4s;
+    }
+    .age_play{ 
+        bottom: 55vh;
+    }
+    .age_play .controls{
+        height: 35px;
+        width: 35px;
+    }
+    .age_play .controls svg{
+        height: 30px;
+    }  
+    .age_play .age_restriction{
+        height: 35px;
+    } 
+    .age_play .age_restriction span{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 451px) {
+    .HomePage .TrailerVideo_container video{
+        width: 295%;
+    }
+}
+@media screen and (max-width: 431px) {
+
+}
+@media screen and (max-width: 401px) {
+    .Primary_Details .description{
+        max-width: 280px;
+        font-size: .9rem;
+    }
+    .Primary_Details .btn_container {
+        margin-top: 13px;
+    }
+    .Primary_Details .btn_container .btn img{
+        height: 20px;
+    }
+}
+@media screen and (max-width: 376px) {
+    .Primary_Details .title_img{
+        width: 180px;
+    }
+}
+@media screen and (max-width: 356px) {
+    .age_play{    
+        display: none;
+    }
+}
+@media screen and (max-width: 351px) {
+    .HomePage .TrailerVideo_container video{
+        width: 400%;
+    }
+
+    .Primary_Details .title_img{
+        width: 200px;
+    }
+    .Primary_Details .description{
+        margin-top: 10px;
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 321px) {
+
+}
+@media screen and (max-width: 301px) {
+    .Primary_Details .btn_container .btn{
+        padding: 10px 15px;
+        gap: 8px;
+        font-size: .9rem;
+    }
+}
